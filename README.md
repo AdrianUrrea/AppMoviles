@@ -1,7 +1,3 @@
-# Explorador móvil
-
-App de Expo + React Native que permite tomar fotos, consultar la ubicación actual y ver una orientación aproximada con el magnetómetro.
-
 ## Instalación
 
 ```bash
