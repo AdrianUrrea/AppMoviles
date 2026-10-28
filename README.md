@@ -23,15 +23,14 @@ Escanea el QR con **Expo Go** en un teléfono físico (misma red local). Si fall
 ## Estructura
 
 - `App.js`: navegación simple por pestañas (Cámara, Ubicación, Brújula).
-- `components/CamaraScreen.js`: permiso, vista previa con `CameraView`, captura e imagen.
-- `components/UbicacionScreen.js`: permiso en primer plano, `getCurrentPositionAsync`, carga y errores.
-- `components/BrujulaScreen.js`: `Magnetometer` dentro de `useEffect` con limpieza; "Sensor no disponible".
+  - `src/CamaraScreen.js`: permiso, vista previa con `CameraView`, captura e imagen.
+- `src/UbicacionScreen.js`: permiso en primer plano, `getCurrentPositionAsync`, carga y errores.
+- `src/BrujulaScreen.js`: `Magnetometer` dentro de `useEffect` con limpieza; "Sensor no disponible".
 
 ## Limitaciones conocidas
 
 - La brújula usa `atan2(y, x)` y asume el teléfono horizontal; no corrige inclinación ni declinación magnética, y no está calibrada.
-- Metales, imanes y electrónica cercana alteran la lectura del magnetómetro.
 - La precisión de la ubicación es una estimación del dispositivo, no un error garantizado.
 - Las fotos no se guardan en la galería; solo se muestran mientras la app está abierta.
-- La ubicación no se almacena ni se envía.
-- Probado en teléfono físico; los simuladores pueden carecer de cámara/sensores.
+- La ubicación no se guarda ni es enviada a ningún lado.
+- Probado en teléfono físico, no fue probado en simuladores.
